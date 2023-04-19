@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package com.tmk.grpckt;
+
+option java_multiple_files = true;
+option java_package = "com.tmk.grpckt.named.greeter";
+option java_outer_classname = "FetchGreetingRequestProto";
+
+message FetchGreetingRequest {
+  string name = 1;
+}

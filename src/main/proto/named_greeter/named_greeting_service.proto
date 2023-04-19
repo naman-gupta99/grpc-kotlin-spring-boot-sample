@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.tmk.grpckt;
+
+import "named_greeter/requests/fetch_greeting_request.proto";
+import "named_greeter/responses/fetch_greeting_response.proto";
+
+option java_multiple_files = true;
+option java_package = "com.tmk.grpckt.named.greeter";
+option java_outer_classname = "NamedGreetingServiceProto";
+option java_generic_services = true;
+
+service NamedGreetingService {
+  rpc FetchGreeting(FetchGreetingRequest) returns (FetchGreetingResponse);
+}
