@@ -29,12 +29,14 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+    implementation("net.devh:grpc-spring-boot-starter:2.14.0.RELEASE")
     implementation("com.google.protobuf:protobuf-java:$protobufVersion")
     implementation("io.grpc:grpc-protobuf")
     implementation("io.grpc:grpc-stub")
     implementation("io.grpc:grpc-netty")
     implementation("io.grpc:grpc-kotlin-stub:$grpcKotlinVersion")
     implementation("javax.annotation:javax.annotation-api:1.3.2")
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
@@ -42,7 +44,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
